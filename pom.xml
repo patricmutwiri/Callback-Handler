@@ -16,7 +16,7 @@
 	</parent>
 	<groupId>xyz.patric</groupId>
 	<artifactId>callbacks</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Callback Handler</name>
 	<description>The callback handler y'all been missing</description>
 	<url>https://github.com/patricmutwiri/Callback-Handler</url>
