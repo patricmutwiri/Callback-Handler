@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Callback Handler
+  datasource:
+    url: jdbc:postgresql://localhost:5432/callbacks
+    username: postgres
+    password: pat1
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  threads:
+    virtual:
+      enabled: true
