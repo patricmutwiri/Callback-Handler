@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright (c) 2024.
-  ~ @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 10:48 PM
+  ~ @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 11:41 PM
   ~
   -->
 
@@ -92,13 +92,18 @@
 	</dependencies>
 
 	<!-- Publishing configuration -->
-<!--	<distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>Callback Handler Service by Patrick Mutwiri on GitHub Packages</name>
 			<url>https://maven.pkg.github.com/patricmutwiri/Callback-Handler</url>
 		</repository>
-	</distributionManagement>-->
+		<snapshotRepository>
+			<id>github</id>
+			<name>Callback Handler Service by Patrick Mutwiri on GitHub Package Snapshots</name>
+			<url>https://maven.pkg.github.com/patricmutwiri/Callback-Handler</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
