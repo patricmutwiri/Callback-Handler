@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 2:28 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 7:03 PM
  *
  */
 
@@ -9,8 +9,8 @@ package xyz.patric.callbacks.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
 public class OpenApiConfig {
 
     @Bean
-    public OpenAPI customOpenAPI() {
+    public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info().title("Callback Handler Service APIs")
                         .description("The callback handler y'all been missing. ")

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 5:54 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 7:03 PM
  *
  */
 
@@ -16,11 +16,15 @@ import xyz.patric.callbacks.repository.RouteRepository;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Service
 @Slf4j
+@Service
 public class RouteService {
+    public final RouteRepository routeRepository;
+
     @Autowired
-    private RouteRepository routeRepository;
+    public RouteService(RouteRepository routeRepository) {
+        this.routeRepository = routeRepository;
+    }
 
     public List<Route> getAllRoutes() {
         return routeRepository.findAll();
