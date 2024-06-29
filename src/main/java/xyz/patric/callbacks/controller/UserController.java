@@ -4,7 +4,7 @@
  *
  */
 
-package xyz.patric.callbacks.controllers;
+package xyz.patric.callbacks.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

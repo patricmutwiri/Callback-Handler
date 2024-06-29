@@ -4,7 +4,7 @@
  *
  */
 
-package xyz.patric.callbacks.entities;
+package xyz.patric.callbacks.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

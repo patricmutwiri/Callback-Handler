@@ -4,7 +4,7 @@
  *
  */
 
-package xyz.patric.callbacks.models;
+package xyz.patric.callbacks.model;
 
 import lombok.Data;
 
