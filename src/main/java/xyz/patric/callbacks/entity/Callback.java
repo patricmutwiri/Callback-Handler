@@ -1,19 +1,18 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 1:14 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 5:54 PM
  *
  */
 
 package xyz.patric.callbacks.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity(name = "callbacks")
