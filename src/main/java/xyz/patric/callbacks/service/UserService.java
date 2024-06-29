@@ -1,30 +1,44 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 5:30 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 9:20 PM
  *
  */
 
 package xyz.patric.callbacks.service;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import xyz.patric.callbacks.entity.User;
+import xyz.patric.callbacks.model.UserMdl;
+import xyz.patric.callbacks.repository.UserRepository;
 
 import java.util.List;
 
 @Service
 public class UserService {
-    public void deleteUser(Long id) {
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    public User saveUser(User user) {
-        return user;
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
+
+    public User saveUser(UserMdl user) {
+        User newUser = new User();
+        user.setName(user.getName());
+        user.setEmail(user.getEmail());
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+        return userRepository.saveAndFlush(newUser);
     }
 
     public User getUserById(Long id) {
-        return null;
+        return userRepository.findById(id).orElse(null);
     }
 
     public List<User> getAllUsers() {
-        return List.of();
+        return userRepository.findAll();
     }
 }

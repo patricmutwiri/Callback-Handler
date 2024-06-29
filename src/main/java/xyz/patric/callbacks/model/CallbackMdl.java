@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 1:17 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 9:20 PM
  *
  */
 
@@ -10,4 +10,6 @@ import lombok.Data;
 
 @Data
 public class CallbackMdl {
+    private String type;
+    private String payload;
 }

@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 5:30 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 9:20 PM
  *
  */
 
@@ -9,6 +9,7 @@ package xyz.patric.callbacks.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xyz.patric.callbacks.entity.User;
+import xyz.patric.callbacks.model.UserMdl;
 import xyz.patric.callbacks.service.UserService;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
+    public User createUser(@RequestBody UserMdl user) {
         return userService.saveUser(user);
     }
 

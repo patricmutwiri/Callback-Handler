@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 8:13 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 9:20 PM
  *
  */
 
@@ -14,6 +14,7 @@ import xyz.patric.callbacks.model.CallbackMdl;
 import xyz.patric.callbacks.repository.CallbackRepository;
 import xyz.patric.callbacks.repository.RouteRepository;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +41,9 @@ public class CallbackService {
         Route route = routeRepository.findByPath(path);
         Callback c = new Callback();
         c.setRoute(route);
-        c.setType(c.getType());
-        c.setPayload(c.getPayload());
+        c.setType(callback.getType());
+        c.setPayload(callback.getPayload());
+        c.setCreatedAt(LocalDateTime.now());
         return callbackRepository.saveAndFlush(c);
     }
 }
