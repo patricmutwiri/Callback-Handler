@@ -9,6 +9,7 @@ package xyz.patric.callbacks.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity(name = "callbacks")
 public class Callback {
@@ -16,7 +17,9 @@ public class Callback {
     @GeneratedValue
     private Long id;
 
-    private String route;
+    @ManyToOne
+    private Route route;
+
     private String type;
     private String payload;
 }
