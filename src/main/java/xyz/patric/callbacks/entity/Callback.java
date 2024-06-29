@@ -6,13 +6,18 @@
 
 package xyz.patric.callbacks.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.time.LocalDateTime;
+@EqualsAndHashCode(callSuper = true)
+@Data
 @Entity(name = "callbacks")
-public class Callback {
+public class Callback extends Auditable{
     @Id
     @GeneratedValue
     private Long id;
