@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2024.
- * @author Patrick Mutwiri on 6/29/24, 12:52 PM
+ * @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 5:30 PM
  *
  */
 
@@ -9,14 +9,13 @@ package xyz.patric.callbacks.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xyz.patric.callbacks.entity.User;
-import xyz.patric.callbacks.services.UserService;
+import xyz.patric.callbacks.service.UserService;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-
     @Autowired
     private UserService userService;
 
