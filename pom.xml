@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright (c) 2024.
-  ~ @author Patrick Mutwiri <dev@patric.xyz> on 6/29/24, 11:41 PM
+  ~ @author Patrick Mutwiri <dev@patric.xyz> on 6/30/24, 4:00 AM
   ~
   -->
 
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<version>42.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
