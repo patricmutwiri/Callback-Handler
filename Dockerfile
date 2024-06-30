@@ -26,5 +26,10 @@ COPY --from=build /app/target/*.jar /callback-handler.jar
 # Expose the application port
 EXPOSE 8080
 
+# Pass environment variables at runtime
+ENV DB_URL=${DB_URL}
+ENV DB_USERNAME=${DB_USERNAME}
+ENV DB_PASSWORD=${DB_PASSWORD}
+
 # Run the application
 ENTRYPOINT ["java", "-jar", "/callback-handler.jar"]
