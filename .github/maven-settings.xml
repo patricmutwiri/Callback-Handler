@@ -1,6 +1,6 @@
 <!--
   ~ Copyright (c) 2024.
-  ~ @author Patrick Mutwiri <dev@patric.xyz> on 7/1/24, 11:14 PM
+  ~ @author Patrick Mutwiri <dev@patric.xyz> on 7/1/24, 11:25 PM
   ~
   -->
 
@@ -24,7 +24,7 @@
         <server>
             <id>github</id>
             <username>patricmutwiri</username>
-            <password>${env.GITHUB_TOKEN}</password>
+            <password>${secrets.CALLBACKHANDLER_TOKEN}</password>
         </server>
     </servers>
 </settings>
