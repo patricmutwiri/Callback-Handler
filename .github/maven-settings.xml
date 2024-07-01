@@ -14,7 +14,7 @@
                 <repository>
                     <id>github</id>
                     <name>Callback Handler on Maven GitHub Packages</name>
-                    <url>https://maven.pkg.github.com/patricmutwiri</url>
+                    <url>https://maven.pkg.github.com/patricmutwiri/callback-handler</url>
                 </repository>
             </repositories>
         </profile>
