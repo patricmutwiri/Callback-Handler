@@ -37,7 +37,7 @@ jobs:
       - name: Publish Solution to GitHub Packages
         run: mvn deploy -e -X
         env:
-          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          GITHUB_USERNAME: ${{ github.actor }}
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GREGISTRY_TOKEN }}
 #        run: mvn deploy -e -X -s .github/maven-settings.xml
