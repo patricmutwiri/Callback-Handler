@@ -3,7 +3,7 @@ name: Push to Registries
 on:
   push:
     branches:
-      - "master"
+      - 'master'
 jobs:
   docker:
     runs-on: ubuntu-latest
