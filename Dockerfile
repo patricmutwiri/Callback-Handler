@@ -2,6 +2,7 @@
 FROM alpine:latest AS build
 
 LABEL maintainer="Patrick Mutwiri <dev@patric.xyz> https://patric.xyz"
+LABEL org.opencontainers.image.source=https://github.com/patricmutwiri/callback-handler
 
 # Set environment variables
 ENV MAVEN_VERSION=3.8.7
