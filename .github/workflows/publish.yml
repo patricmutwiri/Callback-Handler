@@ -38,5 +38,5 @@ jobs:
         run: mvn deploy -e -X
         env:
           GITHUB_USERNAME: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
 #        run: mvn deploy -e -X -s .github/maven-settings.xml
