@@ -6,6 +6,8 @@
 
 package xyz.patric.callbacks.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xyz.patric.callbacks.entity.Callback;
@@ -14,6 +16,7 @@ import xyz.patric.callbacks.service.CallbackService;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/callbacks")
 public class CallbackController {
@@ -35,7 +38,8 @@ public class CallbackController {
     }
 
     @PostMapping("/{path}")
-    public Callback createCallback(@PathVariable String path, @RequestBody CallbackMdl callback) {
+    public Callback createCallback(HttpServletRequest httpServletRequest, @PathVariable String path, @RequestBody CallbackMdl callback) {
+        httpServletRequest.getHeaderNames().asIterator().forEachRemaining(name -> log.info(">> {} {} ", name, httpServletRequest.getHeader(name)));
         return callbackService.saveCallback(path, callback);
     }
 }

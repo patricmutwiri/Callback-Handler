@@ -1,34 +1,19 @@
 spring:
   application:
     name: Callback Handler
-  datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/callbacks}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:pat1}
-    hikari:
-      maximum-pool-size: 10
-      minimum-idle: 5
-      max-lifetime: 1800000
-      connection-timeout: 30000
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
   threads:
     virtual:
       enabled: true
-  sql:
-    init:
-#      mode: always
-#      schema-locations: classpath:schema.sql
-#      data-locations: classpath:data.sql
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:callbacks}
+    username: ${DB_USERNAME:username}
+    password: ${DB_PASSWORD:password}
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
   security:
     user:
       name: ${SS_USERNAME:user}

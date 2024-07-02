@@ -26,4 +26,5 @@ public class Callback extends Auditable{
 
     private String type;
     private String payload;
+    private String headers;
 }
